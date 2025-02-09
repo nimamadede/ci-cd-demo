@@ -14,9 +14,11 @@ jobs:
         python-version: '3.9'
     - name: Install dependencies
       run: |
-        python3.9 -m venv venv
+        python3 -m venv venv
         source venv/bin/activate
         pip install -r requirements.txt
+    - name: Check python3 path
+        run: which python3
     - name: Run Tests
       run: |
         source venv/bin/activate
