@@ -19,6 +19,11 @@ jobs:
         pip install -r requirements.txt
     - name: Check python3 path
         run: which python3
+    - name: Activate virtual environment and install dependencies
+  run: |
+    source venv/bin/activate  # 激活虚拟环境
+    pip install -r requirements.txt  # 安装依赖
+
     - name: Run Tests
       run: |
         source venv/bin/activate
